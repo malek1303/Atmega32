@@ -4,7 +4,8 @@
             "name": "Win32",
             "includePath": [
                 "${workspaceFolder}/**",
-                "${workspaceFolder}/LIB"
+                "${workspaceFolder}/LIB",
+                "C:\\Users\\Malek\\Desktop\\Atmega32"
             ],
             "defines": [
                 "_DEBUG",

@@ -33,6 +33,7 @@ void DIO_voidSetPortValue(u8 port, u8 value);
 u8   DIO_u8GetPortValue(u8 port);
 void DIO_voidTogglePortValue(u8 port);
 
-
+void DIO_voidSetHigherNibbleValue(u8 port, u8 value);
+void DIO_voidSetLowerNibbleValue(u8 port, u8 value);
 
 #endif // DIO_INTERFACE_H

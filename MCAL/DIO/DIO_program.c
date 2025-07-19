@@ -145,6 +145,7 @@ void DIO_voidSetPortDirection(u8 port, u8 dir)
     case DIO_PORTD: DDRD = dir; break;
     }
 }
+
 void DIO_voidSetPortValue(u8 port, u8 value)
 {
     switch (port)
@@ -155,6 +156,7 @@ void DIO_voidSetPortValue(u8 port, u8 value)
     case DIO_PORTD: PORTD =value; break;
     }
 }
+
 u8   DIO_u8GetPortValue(u8 port)
 {
     switch (port)
@@ -165,6 +167,7 @@ u8   DIO_u8GetPortValue(u8 port)
     case DIO_PORTD: return PIND; break;
     }
 }
+
 void DIO_voidTogglePortValue(u8 port)
 {
     switch (port)
@@ -173,5 +176,53 @@ void DIO_voidTogglePortValue(u8 port)
     case DIO_PORTB: PINB^=0xff; break;
     case DIO_PORTC: PINC^=0xff; break;
     case DIO_PORTD: PIND^=0xff; break;
+    }
+}
+
+void DIO_voidSetLowerNibbleValue(u8 port, u8 value)
+{
+    value &= 0x0f;
+    switch (port)
+    {
+        case DIO_PORTA:
+        PORTA &= 0xf0
+        PORTA |= value;
+        break;
+        case DIO_PORTB:
+        PORTB &= 0xf0
+        PORTB |= value;
+        break;
+        case DIO_PORTC:
+        PORTC &= 0xf0
+        PORTC |= value;
+        break;
+        case DIO_PORTD:
+        PORTC &= 0xf0
+        PORTC |= value;
+        break;
+    }
+}
+
+void DIO_voidSetHigherNibbleValue(u8 port, u8 value)
+{
+    value &= 0xf0;
+    switch (port)
+    {
+        case DIO_PORTA:
+        PORTA &= 0x0f
+        PORTA |= value;
+        break;
+        case DIO_PORTB:
+        PORTB &= 0x0f
+        PORTB |= value;
+        break;
+        case DIO_PORTC:
+        PORTC &= 0x0f
+        PORTC |= value;
+        break;
+        case DIO_PORTD:
+        PORTC &= 0x0f
+        PORTC |= value;
+        break;
     }
 }

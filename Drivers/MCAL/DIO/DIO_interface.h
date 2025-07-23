@@ -22,6 +22,8 @@
 #define DIO_PORTC 2
 #define DIO_PORTD 3
 
+#define PUD 2
+
 
 void DIO_voidSetPinDirection(u8 port, u8 pin, u8 dir);
 void DIO_voidSetPinValue(u8 port, u8 pin, u8 value);
@@ -32,6 +34,8 @@ void DIO_voidSetPortDirection(u8 port, u8 dir);
 void DIO_voidSetPortValue(u8 port, u8 value);
 u8   DIO_u8GetPortValue(u8 port);
 void DIO_voidTogglePortValue(u8 port);
+
+void DIO_voidConnectPullup (u8 port, u8 pin, u8 connectPullup);
 
 void DIO_voidSetHigherNibbleValue(u8 port, u8 value);
 void DIO_voidSetLowerNibbleValue(u8 port, u8 value);

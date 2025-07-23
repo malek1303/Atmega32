@@ -179,6 +179,65 @@ void DIO_voidTogglePortValue(u8 port)
     }
 }
 
+    void DIO_voidConnectPullup (u8 port, u8 pin, u8 connectPullup)
+    {
+        switch(port)
+        {
+            case DIO_PORTA:
+                if(connectPullup == DIO_PIN_HIGH)
+                {
+                    CLR_BIT(SFIOR, PUD);
+                    CLR_BIT(DDRA, pin);
+                    SET_BIT(PORTA, pin);
+                }
+                else
+                {
+                    CLR_BIT(PORTA, pin);
+                }
+                break;
+
+                case DIO_PORTB:
+                if(connectPullup == DIO_PIN_HIGH)
+                {
+                    CLR_BIT(SFIOR, PUD);
+                    CLR_BIT(DDRB, pin);
+                    SET_BIT(PORTB, pin);
+                }
+                else
+                {
+                    CLR_BIT(PORTB, pin);
+                }
+                break;
+
+                case DIO_PORTC:
+                if(connectPullup == DIO_PIN_HIGH)
+                {
+                    CLR_BIT(SFIOR, PUD);
+                    CLR_BIT(DDRC, pin);
+                    SET_BIT(PORTC, pin);
+                }
+                else
+                {
+                    CLR_BIT(PORTC, pin);
+                }
+                break;
+
+                case DIO_PORTD:
+                if(connectPullup == DIO_PIN_HIGH)
+                {
+                    CLR_BIT(SFIOR, PUD);
+                    CLR_BIT(DDRD, pin);
+                    SET_BIT(PORTD, pin);
+                }
+                else
+                {
+                    CLR_BIT(PORTD, pin);
+                }
+                break;
+        }
+        
+    }
+
 void DIO_voidSetLowerNibbleValue(u8 port, u8 value)
 {
     value &= 0x0f;
@@ -225,4 +284,5 @@ void DIO_voidSetHigherNibbleValue(u8 port, u8 value)
         PORTC |= value;
         break;
     }
+
 }

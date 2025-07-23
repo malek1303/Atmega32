@@ -31,6 +31,6 @@
 #define DDRD  *((volatile u8*)0x31)
 #define PIND  *((volatile u8*)0x30)
 
-
+#define SFIOR  *((volatile u8*)0x50)
 
 #endif // DIO_PRIVATE_H

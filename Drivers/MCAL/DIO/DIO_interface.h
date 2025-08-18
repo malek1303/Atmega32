@@ -6,7 +6,7 @@
   \:.\-/\  \ \\:: __  \ \\:\ \ \ \\::___\/_    \::  _  \ \\::::_\/   \:.\-/\  \ \\:: __  \ \\:\ \____\::___\/_\:. __  ( (  
    \. \  \  \ \\:.\ \  \ \\:\/.:| |\:\____/\    \::(_)  \ \ \::\ \    \. \  \  \ \\:.\ \  \ \\:\/___/\\:\____/\\: \ )  \ \ 
     \__\/ \__\/ \__\/\__\/ \____/_/ \_____\/     \_______\/  \__\/     \__\/ \__\/ \__\/\__\/ \_____\/ \_____\/ \__\/\__\/ 
-  */  
+  */ 
 #include "STD_TYPES.h"
 #ifndef DIO_INTERFACE_H
 #define DIO_INTERFACE_H
@@ -21,6 +21,15 @@
 #define DIO_PORTB 1
 #define DIO_PORTC 2
 #define DIO_PORTD 3
+
+#define DIO_PIN0   0
+#define DIO_PIN1   1
+#define DIO_PIN2   2
+#define DIO_PIN3   3
+#define DIO_PIN4   4
+#define DIO_PIN5   5
+#define DIO_PIN6   6
+#define DIO_PIN7   7
 
 #define PUD 2
 

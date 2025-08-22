@@ -9,6 +9,36 @@
 #include "CLCD_private.h"
 
 
+void CLCD_voidInit(void)
+{
+    #if CLCD_MODE == 8
+    
+    _delay_ms(50);
+    DIO_voidSetPortDirection(CLCD_DATA_PORT, DIO_PIN_OUTPUT);
+    DIO_voidSetPinDirection(CLCD_CONTROL_PORT, CLCD_RS, DIO_PIN_OUTPUT);
+    DIO_voidSetPinDirection(CLCD_CONTROL_PORT, CLCD_RW, DIO_PIN_OUTPUT);
+    DIO_voidSetPinDirection(CLCD_CONTROL_PORT, CLCD_EN, DIO_PIN_OUTPUT);
+
+    CLCD_voidSendCommand(lcd_Home);
+    _delay_ms(1);
+
+    CLCD_voidSendCommand(EIGHT_BITS);
+    _delay_ms(1);
+    
+    CLCD_voidSendCommand(lcd_DisplayOn_CursorOff);
+    _delay_ms(1);
+
+    CLCD_voidClearScreen();
+
+    CLCD_voidSendCommand(lcd_EntryMode);
+    _delay_ms(1);
+
+
+    #elif CLCD_MODE == 4
+    #endif
+}
+
+
 void CLCD_voidSendData (u8 Data)
 {
     #if CLCD_MODE == 8 
@@ -22,10 +52,40 @@ void CLCD_voidSendData (u8 Data)
     _delay_ms(1);
 } 
 
+void CLCD_voidSendCommand(u8 Command)
+{
+    #if CLCD_MODE == 8 
+    DIO_voidSetPortValue(CLCD_DATA_PORT , Command);
+    DIO_voidSetPinValue(CLCD_CONTROL_PORT, CLCD_RS, DIO_PIN_LOW);
+    DIO_voidSetPinValue(CLCD_CONTROL_PORT, CLCD_RW, DIO_PIN_LOW);
+    CLCD_voidSendFallingEdge();
+    #elif CLCD_MODE == 4
+    
+    #endif
+    _delay_ms(1);
+}
+
+void CLCD_voidSendString(const u8 *stringptr)
+{
+    u8 loc_counter = 0;
+    while (stringptr[loc_counter]!='\0')
+    {
+        CLCD_voidSendData(stringptr[loc_counter]);
+        loc_counter++;
+    }
+    
+}
+
 static void CLCD_voidSendFallingEdge(void)
 {
     DIO_voidSetPinValue(CLCD_CONTROL_PORT, CLCD_EN, DIO_PIN_HIGH);
     _delay_ms(1);
     DIO_voidSetPinValue(CLCD_CONTROL_PORT,CLCD_EN,DIO_PIN_LOW);
     _delay_ms(1);
+}
+
+void CLCD_voidClearScreen(void)
+{
+    CLCD_voidSendCommand(lcd_Clear);
+    _delay_ms(10);
 }

@@ -20,4 +20,14 @@
 #define lcd_FunctionReset           0x30
 
 
+
+
+void CLCD_voidInit(void);
+void CLCD_voidSendData (u8 Data);
+void CLCD_voidSendCommand(u8 Command);
+void CLCD_voidSendString(const u8 *stringptr);
+static void CLCD_voidSendFallingEdge(void);
+void CLCD_voidClearScreen(void);
+
+
 #endif

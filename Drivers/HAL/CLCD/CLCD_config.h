@@ -1,3 +1,5 @@
+// everything here is dependent on the how you connect
+// the clcd to the uP
 #ifndef CLCD_CONFIG_H
 #define CLCD_CONFIG_H
 
@@ -6,8 +8,8 @@
 #define CLCD_DATA_PORT    DIO_PORTA
 #define CLCD_CONTROL_PORT DIO_PORTC // rs rw en
 
-#define CLCD_RS             DIO_PIN1
-#define CLCD_RW             DIO_PIN2
-#define CLCD_EN             DIO_PIN3
+#define CLCD_RS             DIO_PIN0
+#define CLCD_RW             DIO_PIN1
+#define CLCD_EN             DIO_PIN2
 
 #endif

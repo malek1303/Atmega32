@@ -7,6 +7,7 @@
 #include "CLCD_config.h"
 #include "CLCD_int.h"
 #include "CLCD_private.h"
+#include "CLCD_ExtraChar.h"
 
 
 void CLCD_voidInit(void)
@@ -73,7 +74,43 @@ void CLCD_voidSendString(const u8 *stringptr)
         CLCD_voidSendData(stringptr[loc_counter]);
         loc_counter++;
     }
+    _delay_ms(1);
     
+}
+
+void CLCD_voidSetPosition(u8 row, u8 col)
+{
+    u8 loc_data;
+
+    if(row > 2 || row < 1 || col > 16 || col < 1)
+    {
+        loc_data = lcd_SetCursor;
+    }
+    
+    else if (row == CLCD_ROW_1)
+    {
+        loc_data = ((lcd_SetCursor)+(col - 1));
+    }
+    
+    else if (row == CLCD_ROW_2)
+    {
+        loc_data = ((lcd_SetCursor)+ (64) +(col - 1));
+    }
+    CLCD_voidSendCommand(loc_data);
+    _delay_ms(1);
+}
+
+void CLCD_voidSendExtraChar( u8 Row , u8 Col )
+{
+	u8 loc_counter = 0 ;
+
+	CLCD_voidSendCommand( lcd_CGRAM );
+
+	for( loc_counter = 0 ; loc_counter < sizeof(CLCD_u8ExtraChar) / sizeof(CLCD_u8ExtraChar[0]) ; loc_counter++){
+
+		CLCD_voidSendData( CLCD_u8ExtraChar[loc_counter] );
+
+	}
 }
 
 static void CLCD_voidSendFallingEdge(void)

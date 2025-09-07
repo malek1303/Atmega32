@@ -20,6 +20,7 @@
 #define SEG_PORTC 2
 #define SEG_PORTD 3
 
+// takes physical config info 
 typedef struct
 {
     u8 Type;

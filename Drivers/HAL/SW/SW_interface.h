@@ -24,7 +24,7 @@
 #define SW_INT_PULL_DOWN 2
 #define SW_FLOATING 3
 
-typedef struct
+typedef struct //defines switch config
 {
     u8 Port;
     u8 Pin;

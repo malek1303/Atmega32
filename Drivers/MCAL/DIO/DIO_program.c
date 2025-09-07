@@ -14,6 +14,7 @@
 #include "DIO_interface.h"
 #include "DIO_private.h"
 
+// takes port address & pin number & direction then sets pin direction to out or in
 void DIO_voidSetPinDirection(u8 port, u8 pin, u8 dir)
 {
     if (dir == DIO_PIN_OUTPUT)
@@ -55,6 +56,7 @@ void DIO_voidSetPinDirection(u8 port, u8 pin, u8 dir)
     }
 }
 
+// takes port addr & pin num & bin value and outputs it to the pin
 void DIO_voidSetPinValue(u8 port, u8 pin, u8 value)
 {
     if (value == DIO_PIN_HIGH)
@@ -96,6 +98,7 @@ void DIO_voidSetPinValue(u8 port, u8 pin, u8 value)
     }
 }
 
+// returns specified port as a u8 value
 u8   DIO_u8GetPinValue(u8 port, u8 pin)
 {
     switch (port)
@@ -115,7 +118,7 @@ u8   DIO_u8GetPinValue(u8 port, u8 pin)
         }
 }
 
-
+// toggles specified pin
 void DIO_voidTogglePinValue(u8 port, u8 pin)
 {
     switch (port)
@@ -134,7 +137,7 @@ void DIO_voidTogglePinValue(u8 port, u8 pin)
             break;
         }
 }
-
+// maps the directions of all pins of a port to a specified u8 value
 void DIO_voidSetPortDirection(u8 port, u8 dir)
 {
     switch (port)
@@ -146,6 +149,7 @@ void DIO_voidSetPortDirection(u8 port, u8 dir)
     }
 }
 
+// sets the value of the whole port
 void DIO_voidSetPortValue(u8 port, u8 value)
 {
     switch (port)
@@ -157,6 +161,7 @@ void DIO_voidSetPortValue(u8 port, u8 value)
     }
 }
 
+// returns the value of the port as a u8
 u8   DIO_u8GetPortValue(u8 port)
 {
     switch (port)
@@ -168,6 +173,7 @@ u8   DIO_u8GetPortValue(u8 port)
     }
 }
 
+// toggles the value of the whole port
 void DIO_voidTogglePortValue(u8 port)
 {
     switch (port)
@@ -179,6 +185,8 @@ void DIO_voidTogglePortValue(u8 port)
     }
 }
 
+// configures the pin internal pull up config
+// HINT: the pin must be an input pin else you would be changing the value of the output
     void DIO_voidConnectPullup (u8 port, u8 pin, u8 connectPullup)
     {
         switch(port)
@@ -238,6 +246,7 @@ void DIO_voidTogglePortValue(u8 port)
         
     }
 
+// sets the lower 4 pins value pin 0 --> 3
 void DIO_voidSetLowerNibbleValue(u8 port, u8 value)
 {
     value &= 0x0f;
@@ -262,6 +271,7 @@ void DIO_voidSetLowerNibbleValue(u8 port, u8 value)
     }
 }
 
+// sets the higher 8 pins value pin 4 --> 7
 void DIO_voidSetHigherNibbleValue(u8 port, u8 value)
 {
     value &= 0xf0;

@@ -3,5 +3,5 @@
 #ifndef CLCD_EXTRACHAR_H_
 #define CLCD_EXTRACHAR_H_
 
-u8 CLCD_u8ExtraChar[] = {};
+u8 CLCD_u8ExtraChar[] = {}; //custom chars to be inserted here using arr
 #endif 

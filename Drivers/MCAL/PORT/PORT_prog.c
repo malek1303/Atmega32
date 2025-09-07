@@ -4,6 +4,7 @@
 #include "PORT_priv.h"
 #include "PORT_int.h"
 
+//initializes port directions and values from PORT_config.h
 void PORT_voidInit(void)
 {
 	DDRA_Register=PORTA_DIR;

@@ -6,13 +6,15 @@
 #include "SEG_private.h"
 #include "SEG_config.h"
 
-static u8 Local_SEGNumbers[10] = SEG_NUMBER_ARR;
+static u8 Local_SEGNumbers[10] = SEG_NUMBER_ARR; // numbers from 0 -- 9 to be used on the 7SEG
 
+// takes initial hardware config as a SEG_Type struct
 void SEG_voidInitialDataPort (SEG_Type structconfig)
 {
     DIO_voidSetPortDirection(structconfig.DataPort, 0xff);
 }
 
+//outputs the desiered num on the 7SEG
 void SEG_voidSendNumber(SEG_Type structconfig, u8 Number)
 {
     if(structconfig.Type == SEG_COMMON_CATHODE)
@@ -25,6 +27,7 @@ void SEG_voidSendNumber(SEG_Type structconfig, u8 Number)
     } 
 }
 
+// enables the 7SEG display by outputing on the 7seg enable pin according to the config in the SEG_Type struct
 void SEG_voidEnable(SEG_Type segconfig)
 {
     if(segconfig.Type == SEG_COMMON_CATHODE)
@@ -39,6 +42,7 @@ void SEG_voidEnable(SEG_Type segconfig)
     }
 }
 
+// Disables the 7SEG display by outputing on the 7seg enable pin according to the config in the SEG_Type struct
 void SEG_voidDisable(SEG_Type segconfig)
 {
     if(segconfig.Type == SEG_COMMON_CATHODE)

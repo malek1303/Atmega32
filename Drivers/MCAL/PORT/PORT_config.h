@@ -3,7 +3,8 @@
 
 #define DIO_INPUT  0
 #define DIO_OUTPUT 1
-	   
+
+// config of all pin directons
 #define PORTA_PIN0_DIR				DIO_INPUT
 #define PORTA_PIN1_DIR				DIO_INPUT
 #define PORTA_PIN2_DIR				DIO_INPUT
@@ -46,6 +47,9 @@
 #define OUTPUT_LOW     0
 #define OUTPUT_HIGH    1
 
+// config of all pin values
+// input_floating or input_Pullup if pins are input
+// output_high or output_low if pins are output
 #define PORTA_PIN0_INITIAL_VALUE	INPUT_FLOATING
 #define PORTA_PIN1_INITIAL_VALUE    INPUT_FLOATING
 #define PORTA_PIN2_INITIAL_VALUE    INPUT_FLOATING

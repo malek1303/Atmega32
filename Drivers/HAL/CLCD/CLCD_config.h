@@ -1,9 +1,8 @@
-// everything here is dependent on the how you connect
-// the clcd to the uP
 #ifndef CLCD_CONFIG_H
 #define CLCD_CONFIG_H
 
-#define CLCD_MODE 8
+// adjust based on Hardware connections
+#define CLCD_MODE 8  //number of bits mode (4 or 8)
 
 #define CLCD_DATA_PORT    DIO_PORTA
 #define CLCD_CONTROL_PORT DIO_PORTC // rs rw en

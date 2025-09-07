@@ -1,6 +1,7 @@
 #ifndef SEG_PRIVATE_H_
 #define SEG_PRIVATE_H_
 
+// numbers from 0 --> 9 used to display the numbers on the 7SEG
 #define SEG_NUMBER_ARR {0B00111111, 0b00000110, 0b01011011,0b01001111, 0b01100110, 0b01101101, 0b01111101, 0b00000111, 0b01111111, 0b01101111}
 
 #endif

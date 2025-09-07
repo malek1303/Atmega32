@@ -1,4 +1,4 @@
-#define F_CPU 8000000UL
+#include "CPU_Freq.h"
 #include <util/delay.h>
 
 #include "STD_TYPES.h"
@@ -9,7 +9,7 @@
 #include "CLCD_private.h"
 #include "CLCD_ExtraChar.h"
 
-
+// automaic initialization based on info in CLCD_config.h
 void CLCD_voidInit(void)
 {
     #if CLCD_MODE == 8
@@ -39,7 +39,7 @@ void CLCD_voidInit(void)
     #endif
 }
 
-
+//sends char to lcd (input needs to be in ASCII)
 void CLCD_voidSendData (u8 Data)
 {
     #if CLCD_MODE == 8 
@@ -53,6 +53,7 @@ void CLCD_voidSendData (u8 Data)
     _delay_ms(1);
 } 
 
+//sends command (all commands are avalible as macros)
 void CLCD_voidSendCommand(u8 Command)
 {
     #if CLCD_MODE == 8 
@@ -66,6 +67,7 @@ void CLCD_voidSendCommand(u8 Command)
     _delay_ms(1);
 }
 
+//sends string to lcd (input MUST be an pointer to array)
 void CLCD_voidSendString(const u8 *stringptr)
 {
     u8 loc_counter = 0;
@@ -78,6 +80,7 @@ void CLCD_voidSendString(const u8 *stringptr)
     
 }
 
+// sets position of the cursor (row,col)
 void CLCD_voidSetPosition(u8 row, u8 col)
 {
     u8 loc_data;
@@ -100,6 +103,7 @@ void CLCD_voidSetPosition(u8 row, u8 col)
     _delay_ms(1);
 }
 
+//sends extra char from CLCD_ExtraChar.h 
 void CLCD_voidSendExtraChar( u8 Row , u8 Col )
 {
 	u8 loc_counter = 0 ;
@@ -113,6 +117,7 @@ void CLCD_voidSendExtraChar( u8 Row , u8 Col )
 	}
 }
 
+//sends falling edge to lcd
 static void CLCD_voidSendFallingEdge(void)
 {
     DIO_voidSetPinValue(CLCD_CONTROL_PORT, CLCD_EN, DIO_PIN_HIGH);
@@ -121,6 +126,7 @@ static void CLCD_voidSendFallingEdge(void)
     _delay_ms(1);
 }
 
+//cleares the clcd
 void CLCD_voidClearScreen(void)
 {
     CLCD_voidSendCommand(lcd_Clear);

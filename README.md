@@ -1,4 +1,3 @@
-```markdown
 # Atmega32 - Peripheral Drivers and Utilities
 
 A lightweight collection of MCU drivers, utilities and example code for the Atmega32 (AVR) microcontroller.

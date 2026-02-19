@@ -12,6 +12,7 @@ This repository gathers low-level drivers for common peripherals (DIO/PORT, LEDs
 - Default branch: `main`
 - Drivers and peripherals implemented (high level):
   - DIO / PORT drivers (pin / port configuration, pull-ups)
+  - EXTI driver
   - LED drivers
   - 7-segment (SEG) drivers
   - CLCD (character LCD) drivers, plus support for custom characters (CLCD_ExtraChar)

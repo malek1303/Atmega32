@@ -1,3 +1,3 @@
-#ifndef SEGCONFH
-#define SEGCONFH
-#endif
+#pragma once
+
+//left empty for future use

@@ -1,6 +1,5 @@
 #include "STD_TYPES.h"
-#ifndef LED_INTERFACE_H
-#define LED_INTERFACE_H
+#pragma once
 
 #define ACTIVE_HIGH 1
 #define ACTIVE_LOW 0
@@ -32,4 +31,3 @@ void LED_voidOn(LED_Type LED_config);
 void LED_voidOff(LED_Type LED_config);
 void LED_voidToggle(LED_Type LED_config);
 
-#endif

@@ -1,5 +1,4 @@
-#ifndef CLCD_INT_H
-#define CLCS_INT_H
+#pragma once
 
 #include "CLCD_config.h"
 
@@ -46,5 +45,3 @@ void CLCD_voidSendString(const u8 *stringptr);
 static void CLCD_voidSendFallingEdge(void);
 void CLCD_voidClearScreen(void);
 
-
-#endif

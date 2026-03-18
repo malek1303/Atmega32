@@ -1,5 +1,4 @@
-#ifndef PORT_CONFIG_H_
-#define PORT_CONFIG_H_
+#pragma once
 
 #define DIO_INPUT  0
 #define DIO_OUTPUT 1
@@ -86,4 +85,3 @@
 #define PORTD_PIN6_INITIAL_VALUE    INPUT_FLOATING
 #define PORTD_PIN7_INITIAL_VALUE	INPUT_FLOATING
 
-#endif

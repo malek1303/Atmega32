@@ -1,3 +1,3 @@
-#ifndef LEDPRIVH
-#define LEDPRIVH
-#endif
+#pragma once
+
+//left empty for future use

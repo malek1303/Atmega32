@@ -1,5 +1,4 @@
-#ifndef EXTI_PRIVATE_H_
-#define EXTI_PRIVATE_H_
+#pragma once
 
 #define MCUCR_REG     *((volatile u8 *)0x55)
 #define MCUCSR_REG    *((volatile u8 *)0x54)
@@ -8,4 +7,3 @@
 
 #define NULL 0
 
-#endif //EXTI_PRIVATE_H_

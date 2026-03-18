@@ -1,6 +1,5 @@
 #include "STD_TYPES.h"
-#ifndef SW_INTERFACE_H_
-#define SW_INTERFACE_H_
+#pragma once
 
 #define SW_PIN0 0
 #define SW_PIN1 1
@@ -34,4 +33,3 @@ typedef struct //defines switch config
 void SW_voidInit (SW_Type sw_config);
 u8 SW_u8Pressed (SW_Type sw_config);
 
-#endif

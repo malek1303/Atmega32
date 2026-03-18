@@ -1,4 +1,3 @@
-#ifndef SW_CONFIG_H
-#define SW_CONFIG_H
+#pragma once
 
-#endif
+//left empty for future use

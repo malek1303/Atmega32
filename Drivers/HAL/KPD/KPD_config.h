@@ -1,5 +1,5 @@
-#ifndef KPD_CONFIG_H
-#define KPD_CONFIG_H
+#pragma once
+
 #include "DIO_interface.h"
 
 #define KPD_ROW_INIT DIO_PIN0
@@ -26,5 +26,3 @@ u8 KPD_u8BUTTONS[4][4]= { {'7','8','9','/'}, //r0
 #define KPD_C1 DIO_PIN5
 #define KPD_C2 DIO_PIN6
 #define KPD_C3 DIO_PIN7
-
-#endif

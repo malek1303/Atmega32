@@ -7,8 +7,7 @@
    \. \  \  \ \\:.\ \  \ \\:\/.:| |\:\____/\    \::(_)  \ \ \::\ \    \. \  \  \ \\:.\ \  \ \\:\/___/\\:\____/\\: \ )  \ \ 
     \__\/ \__\/ \__\/\__\/ \____/_/ \_____\/     \_______\/  \__\/     \__\/ \__\/ \__\/\__\/ \_____\/ \_____\/ \__\/\__\/ 
   */  
-#ifndef STD_TYPES_H
-#define STD_TYPES_H
+#pragma once
 
 typedef unsigned char           u8;
 typedef unsigned short int      u16;
@@ -21,4 +20,3 @@ typedef signed long long int    s64;
 typedef float                   f32;
 typedef double                  f64;
 
-#endif // STD_TYPES_H

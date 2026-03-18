@@ -1,6 +1,5 @@
 #include "STD_TYPES.H"
-#ifndef DIO_PRIVATE_H
-#define DIO_PRIVATE_H
+#pragma once
 
 // group A
 #define PORTA *((volatile u8*)0x3b)
@@ -24,4 +23,3 @@
 
 #define SFIOR  *((volatile u8*)0x50)
 
-#endif // DIO_PRIVATE_H

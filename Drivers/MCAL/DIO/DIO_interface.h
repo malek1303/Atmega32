@@ -1,6 +1,5 @@
 #include "STD_TYPES.h"
-#ifndef DIO_INTERFACE_H
-#define DIO_INTERFACE_H
+#pragma once
 
 #define DIO_PIN_OUTPUT 1
 #define DIO_PIN_INPUT 0
@@ -42,5 +41,3 @@ void DIO_voidConnectPullup (u8 port, u8 pin, u8 connectPullup);
 // half port functions (nibble)
 void DIO_voidSetHigherNibbleValue(u8 port, u8 value);
 void DIO_voidSetLowerNibbleValue(u8 port, u8 value);
-
-#endif // DIO_INTERFACE_H

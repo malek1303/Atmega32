@@ -1,4 +1,3 @@
-#ifndef _KPD_PRIV
-#define _KPD_PRIV
+#pragma once
 
-#endif
+//left empty for future use

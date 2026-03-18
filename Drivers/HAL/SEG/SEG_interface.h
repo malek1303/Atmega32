@@ -1,7 +1,6 @@
 
 #include "STD_TYPES.h"
-#ifndef SEG_INTERFACE_H_
-#define SEG_INTERFACE_H_
+#pragma once
 
 #define SEG_COMMON_CATHODE 0
 #define SEG_COMMON_ANODE 1
@@ -34,4 +33,3 @@ void SEG_voidSendNumber(SEG_Type structconfig, u8 Number);
 void SEG_voidEnable(SEG_Type segconfig);
 void SEG_voidDisable(SEG_Type segconfig);
 
-#endif

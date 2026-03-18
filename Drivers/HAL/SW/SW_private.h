@@ -1,4 +1,3 @@
-#ifndef SW_PRIV_H
-#define SW_PRIV_H
+#pragma once
 
-#endif
+//left empty for future use

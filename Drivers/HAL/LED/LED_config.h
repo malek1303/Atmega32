@@ -1,3 +1,3 @@
-#ifndef LEDCONFH
-#define LEDCONFH
-#endif
+#pragma once
+
+//left empty for future use

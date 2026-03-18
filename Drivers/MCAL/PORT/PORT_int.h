@@ -1,6 +1,2 @@
-#ifndef PORT_INTERFACE_H_
-#define PORT_INTERFACE_H_
-
+#pragma once
 void PORT_voidInit(void);
-
-#endif

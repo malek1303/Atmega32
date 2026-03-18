@@ -7,8 +7,7 @@
    \. \  \  \ \\:.\ \  \ \\:\/.:| |\:\____/\    \::(_)  \ \ \::\ \    \. \  \  \ \\:.\ \  \ \\:\/___/\\:\____/\\: \ )  \ \ 
     \__\/ \__\/ \__\/\__\/ \____/_/ \_____\/     \_______\/  \__\/     \__\/ \__\/ \__\/\__\/ \_____\/ \_____\/ \__\/\__\/ 
   */  
-#ifndef BIT_MATH_H
-#define BIT_MATH_H
+#pragma once
 
 #define SET_BIT(reg,bit)        reg|=(1<<bit)
 #define CLR_BIT(reg,bit)        reg&=(~(1<<bit))
@@ -18,4 +17,6 @@
 #define IS_BIT_SET(reg,bit)     (reg&(1<<bit))>>bit     //returns a boolen
 #define IS_BIT_CLR(reg,bit)     !((reg&(1<<bit))>>bit)  //returns a boolen
 
-#endif // BIT_MATH_H
+
+
+typedef char arr[16];

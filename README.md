@@ -111,7 +111,7 @@ Atmega32/
 
 Built and maintained by **Malek Mahdy**.
 
-* 🎓 **Role:** Head of the Embedded Systems Committee @ IEEE
+* 🎓 **Role:** Head of the Embedded Systems Committee @ IEEE MUST SB
 * 🐧 **OS:** Arch Linux (I use Arch, btw)
 * 📫 **Contact:** [malekmahdy@ieee.org](mailto:malekmahdy@ieee.org)
 

@@ -1,12 +1,3 @@
-/*
- ___ __ __   ________   ______   ______        _______   __  __     ___ __ __   ________   __       ______   ___   ___     
-/__//_//_/\ /_______/\ /_____/\ /_____/\     /_______/\ /_/\/_/\   /__//_//_/\ /_______/\ /_/\     /_____/\ /___/\/__/\    
-\::\| \| \ \\::: _  \ \\:::_ \ \\::::_\/_    \::: _  \ \\ \ \ \ \  \::\| \| \ \\::: _  \ \\:\ \    \::::_\/_\::.\ \\ \ \   
- \:.      \ \\::(_)  \ \\:\ \ \ \\:\/___/\    \::(_)  \/_\:\_\ \ \  \:.      \ \\::(_)  \ \\:\ \    \:\/___/\\:: \/_) \ \  
-  \:.\-/\  \ \\:: __  \ \\:\ \ \ \\::___\/_    \::  _  \ \\::::_\/   \:.\-/\  \ \\:: __  \ \\:\ \____\::___\/_\:. __  ( (  
-   \. \  \  \ \\:.\ \  \ \\:\/.:| |\:\____/\    \::(_)  \ \ \::\ \    \. \  \  \ \\:.\ \  \ \\:\/___/\\:\____/\\: \ )  \ \ 
-    \__\/ \__\/ \__\/\__\/ \____/_/ \_____\/     \_______\/  \__\/     \__\/ \__\/ \__\/\__\/ \_____\/ \_____\/ \__\/\__\/ 
-  */                                                                                                                         
 #include "STD_TYPES.h"
 #include "BIT_MATH.h"
 
@@ -253,19 +244,19 @@ void DIO_voidSetLowerNibbleValue(u8 port, u8 value)
     switch (port)
     {
         case DIO_PORTA:
-        PORTA &= 0xf0
+        PORTA &= 0xf0;
         PORTA |= value;
         break;
         case DIO_PORTB:
-        PORTB &= 0xf0
+        PORTB &= 0xf0;
         PORTB |= value;
         break;
         case DIO_PORTC:
-        PORTC &= 0xf0
+        PORTC &= 0xf0;
         PORTC |= value;
         break;
         case DIO_PORTD:
-        PORTC &= 0xf0
+        PORTC &= 0xf0;
         PORTC |= value;
         break;
     }
@@ -278,19 +269,19 @@ void DIO_voidSetHigherNibbleValue(u8 port, u8 value)
     switch (port)
     {
         case DIO_PORTA:
-        PORTA &= 0x0f
+        PORTA &= 0x0f;
         PORTA |= value;
         break;
         case DIO_PORTB:
-        PORTB &= 0x0f
+        PORTB &= 0x0f;
         PORTB |= value;
         break;
         case DIO_PORTC:
-        PORTC &= 0x0f
+        PORTC &= 0x0f;
         PORTC |= value;
         break;
         case DIO_PORTD:
-        PORTC &= 0x0f
+        PORTC &= 0x0f;
         PORTC |= value;
         break;
     }

@@ -1,4 +1,5 @@
 #pragma once
+#include "STD_TYPES.h"
 
 //DDR registar address
 #define DDRA_Register 		*((volatile u8*)0x3a)

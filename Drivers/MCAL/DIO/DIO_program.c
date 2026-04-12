@@ -117,16 +117,16 @@ void DIO_voidTogglePinValue(u8 port, u8 pin)
     switch (port)
         {
         case DIO_PORTA:
-            return TOG_BIT(PINA,pin);
+            TOG_BIT(PORTA,pin);
             break;
         case DIO_PORTB:
-            return TOG_BIT(PINB,pin);
+            TOG_BIT(PORTB,pin);
             break;
         case DIO_PORTC:
-            return TOG_BIT(PINC,pin);
+            TOG_BIT(PORTC,pin);
             break;
         case DIO_PORTD:
-            return TOG_BIT(PIND,pin);
+            TOG_BIT(PORTD,pin);
             break;
         }
 }

@@ -171,10 +171,10 @@ void DIO_voidTogglePortValue(u8 port)
 {
     switch (port)
     {
-    case DIO_PORTA: PINA^=0xff; break;
-    case DIO_PORTB: PINB^=0xff; break;
-    case DIO_PORTC: PINC^=0xff; break;
-    case DIO_PORTD: PIND^=0xff; break;
+    case DIO_PORTA: PORTA^=0xff; break;
+    case DIO_PORTB: PORTB^=0xff; break;
+    case DIO_PORTC: PORTC^=0xff; break;
+    case DIO_PORTD: PORTD^=0xff; break;
     }
 }
 

@@ -70,7 +70,7 @@ void DIO_voidSetPinValue(u8 port, u8 pin, u8 value)
             break;
         }
     }
-    else if (value == DIO_PIN_HIGH)
+    else if (value == DIO_PIN_LOW)
     {
         switch (port)
         {

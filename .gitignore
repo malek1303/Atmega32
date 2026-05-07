@@ -1,2 +1,3 @@
 .vscode/
 fake_headers/
+*.py

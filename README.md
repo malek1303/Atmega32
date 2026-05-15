@@ -26,7 +26,7 @@ This repository provides simple, plug-and-play drivers for common peripherals so
 
 ---
 
-## 📂 Repository Structure
+##  Repository Structure
 
 # Atmega32 Repository Structure
 
@@ -87,7 +87,7 @@ Atmega32/
 
 ---
 
-## 🚀 Getting Started
+##  Getting Started
 
 ### Prerequisites
 * **Compiler:** `avr-gcc` toolchain.
@@ -107,12 +107,12 @@ Atmega32/
 
 ---
 
-## 👨‍💻 About the Author
+##  About the Author
 
 Built and maintained by **Malek Mahdy**.
 
-* 🎓 **Role:** Head of the Embedded Systems Committee @ IEEE MUST SB
-* 🐧 **OS:** Arch Linux (I use Arch, btw)
-* 📫 **Contact:** [malekmahdy@ieee.org](mailto:malekmahdy@ieee.org)
+*  **Role:** Head of the Embedded Systems Committee @ IEEE MUST SB
+*  **OS:** Arch Linux (I use Arch, btw)
+*  **Contact:** [malekmahdy@ieee.org](mailto:malekmahdy@ieee.org)
 
 Feel free to fork this repository or submit a pull request if you want to add drivers for Timers, ADC, UART, SPI, or I2C!

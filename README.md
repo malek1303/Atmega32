@@ -1,4 +1,4 @@
-# ⚡ ATmega32 Peripheral Drivers
+#  ATmega32 Peripheral Drivers
 
 ![C](https://img.shields.io/badge/Language-C-blue.svg?style=flat-square&logo=c)
 ![Microcontroller](https://img.shields.io/badge/MCU-ATmega32-red.svg?style=flat-square&logo=microchip)
@@ -11,7 +11,7 @@ This repository provides simple, plug-and-play drivers for common peripherals so
 
 ---
 
-## 🛠️ Supported Peripherals & Drivers
+##  Supported Peripherals & Drivers
 
 * **Core System:**
   * `DIO / PORT`: Complete GPIO port and pin configuration (Direction, Value, Pull-ups).

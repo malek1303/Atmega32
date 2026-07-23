@@ -11,3 +11,8 @@ typedef signed long long int    s64;
 typedef float                   f32;
 typedef double                  f64;
 
+#define OK           	0
+#define NOK          	1
+#define NULL_POINTER 	2
+#define BUSY_STATE	 	3
+#define TIMEOUT_STATE   4

@@ -106,6 +106,7 @@ Atmega32/
 4. Configure your MCU frequency in `CPU_Freq.h` to ensure accurate delay calculations.
 
 ---
+Currently working on: ADC, TIMER and various communication protocols 
 
 ##  About the Author
 
@@ -115,4 +116,4 @@ Built and maintained by **Malek Mahdy**.
 *  **OS:** Arch Linux (I use Arch, btw)
 *  **Contact:** [malekmahdy@ieee.org](mailto:malekmahdy@ieee.org)
 
-Feel free to fork this repository or submit a pull request if you want to add drivers for Timers, ADC, UART, SPI, or I2C!
+Feel free to fork this repository or submit a pull request for whatever additions you want.

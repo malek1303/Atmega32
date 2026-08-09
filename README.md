@@ -117,3 +117,5 @@ Built and maintained by **Malek Mahdy**.
 *  **Contact:** [malekmahdy@ieee.org](mailto:malekmahdy@ieee.org)
 
 Feel free to fork this repository or submit a pull request for whatever additions you want.
+
+Special thanks to @mahmoud-karem for making the youtube course that helped me to learn how to make this driver collection❤️
